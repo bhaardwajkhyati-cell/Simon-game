@@ -5,7 +5,7 @@ var userClickedPattern = [];
 var started = false;
 var level;
 
-startGame() {
+function startGame() {
   if (!started) {
     level = 0;
     $("#level-title").text("Level " + level);
