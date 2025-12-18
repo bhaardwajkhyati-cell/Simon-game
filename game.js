@@ -5,14 +5,24 @@ var userClickedPattern = [];
 var started = false;
 var level;
 
-$(document).keypress(function() {
+startGame() {
   if (!started) {
     level = 0;
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
+    $("#start-btn").hide();
   }
-});
+}
+
+
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+  $("#level-title").text("Tap Start to Play");
+  $("#start-btn").show();
+} else {
+  $("#level-title").text("Press Any Key to Start");
+  $("#start-btn").hide();
+}
 
 
 //for computer activity
