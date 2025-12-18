@@ -11,13 +11,13 @@ function startGame() {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
-    $("#start-btn").hide();
+  
   }
 }
 
+$(document).keypress(startGame);
+$("#start-btn").click(startGame);
 
-$(document).keypress(startGame); // for laptop
-$("#start-btn").click(startGame); // for cell-phone
 
 //for computer activity
 function nextSequence() {
@@ -89,7 +89,14 @@ function startOver(){
     started = false;
   }
 
-  
+
+
+
+
+
+
+
+
 
 
 
