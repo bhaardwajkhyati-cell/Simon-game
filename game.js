@@ -16,14 +16,8 @@ startGame() {
 }
 
 
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-  $("#level-title").text("Tap Start to Play");
-  $("#start-btn").show();
-} else {
-  $("#level-title").text("Press Any Key to Start");
-  $("#start-btn").hide();
-}
-
+$(document).keypress(startGame); // for laptop
+$("#start-btn").click(startGame); // for cell-phone
 
 //for computer activity
 function nextSequence() {
