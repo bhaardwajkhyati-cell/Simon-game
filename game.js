@@ -85,13 +85,7 @@ function startOver(){
     started = false;
   }
 
-  $("#refresh-btn").click(function() {
-    startOver(); // reset variables
-  nextSequence(); // start the game
-  started = true;
-   });
-
-
+  
 
 
 
